@@ -1,0 +1,21 @@
+<!-- IF postrow.S_USER_BADGES -->
+<div class="post-badges">
+    <ul class="badgelist">
+        <!-- BEGIN user_badges -->
+        <li><img src="{postrow.user_badges.BADGE_IMAGE}" alt="{postrow.user_badges.BADGE_NAME}" title="{postrow.user_badges.BADGE_NAME}" /></li>
+        <!-- END user_badges -->
+    </ul>
+</div>
+<!-- ENDIF -->
+
+<!-- IF postrow.U_DISCORD -->
+<div class="post-contact">
+    <a href="{postrow.U_DISCORD}" title="{L_DISCORD}"><img src="{T_THEME_PATH}/images/icon_discord.png" alt="{L_DISCORD}" /></a>
+</div>
+<!-- ENDIF -->
+
+<!-- IF postrow.U_TELEGRAM -->
+<div class="post-contact">
+    <a href="{postrow.U_TELEGRAM}" title="{L_TELEGRAM}"><img src="{T_THEME_PATH}/images/icon_telegram.png" alt="{L_TELEGRAM}" /></a>
+</div>
+<!-- ENDIF -->
