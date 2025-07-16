@@ -13,4 +13,13 @@ class userextensions_info
             ],
         ];
     }
+
+    public function acp()
+    {
+        return [
+            'title' => 'ACP_USEREXTENSIONS_TITLE',
+            'auth'  => 'ext_jules/userextensions && acl_a_board',
+            'cat'   => ['ACP_CAT_DOT_MODS'],
+        ];
+    }
 }
