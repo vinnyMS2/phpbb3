@@ -18,7 +18,7 @@ class userextensions_info
     {
         return [
             'title' => 'ACP_USEREXTENSIONS_TITLE',
-            'auth'  => 'ext_jules/userextensions && acl_a_board',
+            'auth'  => 'ext_jules/userextensions',
             'cat'   => ['ACP_CAT_DOT_MODS'],
         ];
     }
