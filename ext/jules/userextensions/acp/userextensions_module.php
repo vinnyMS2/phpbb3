@@ -36,6 +36,10 @@ class userextensions_module
             'USEREXTENSIONS_COVER_IMAGES_ENABLED' => $config['userextensions_cover_images_enabled'],
             'USEREXTENSIONS_DISCORD_ENABLED'    => $config['userextensions_discord_enabled'],
             'USEREXTENSIONS_TELEGRAM_ENABLED'   => $config['userextensions_telegram_enabled'],
+            'USEREXTENSIONS_GAMIFICATION_ENABLED' => $config['userextensions_gamification_enabled'],
+            'USEREXTENSIONS_XP_PER_POST'        => $config['userextensions_xp_per_post'],
+            'USEREXTENSIONS_XP_PER_REPLY'       => $config['userextensions_xp_per_reply'],
+            'USEREXTENSIONS_XP_PER_LIKE'        => $config['userextensions_xp_per_like'],
         ]);
     }
 }

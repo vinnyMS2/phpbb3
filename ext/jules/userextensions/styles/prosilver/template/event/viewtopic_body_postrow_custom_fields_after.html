@@ -19,3 +19,14 @@
     <a href="{postrow.U_TELEGRAM}" title="{L_TELEGRAM}"><img src="{T_THEME_PATH}/images/icon_telegram.png" alt="{L_TELEGRAM}" /></a>
 </div>
 <!-- ENDIF -->
+
+<!-- IF postrow.S_GAMIFICATION_ENABLED -->
+<div class="post-gamification">
+    <dl class="details">
+        <dt>{L_LEVEL}:</dt>
+        <dd>{postrow.USER_LEVEL}</dd>
+        <dt>{L_XP}:</dt>
+        <dd>{postrow.USER_XP}</dd>
+    </dl>
+</div>
+<!-- ENDIF -->
