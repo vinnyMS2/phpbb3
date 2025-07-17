@@ -1,0 +1,28 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>{L_LEADERBOARD}</h2>
+
+<div class="panel">
+    <div class="inner">
+        <table class="table1">
+            <thead>
+                <tr>
+                    <th>{L_USERNAME}</th>
+                    <th>{L_XP}</th>
+                    <th>{L_LEVEL}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- BEGIN leaderboard_row -->
+                <tr class="<!-- IF leaderboard_row.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+                    <td>{leaderboard_row.USERNAME}</td>
+                    <td>{leaderboard_row.XP}</td>
+                    <td>{leaderboard_row.LEVEL}</td>
+                </tr>
+                <!-- END leaderboard_row -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

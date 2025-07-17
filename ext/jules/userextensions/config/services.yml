@@ -1,0 +1,31 @@
+services:
+    jules.userextensions.listener:
+        class: jules\userextensions\event\listener
+        arguments:
+            - '@dbal.conn'
+            - '@config'
+            - '@template'
+            - '%core.table_prefix%'
+        tags:
+            - { name: event.subscriber }
+
+    jules.userextensions.acp_controller:
+        class: jules\userextensions\acp\userextensions_module
+        arguments:
+            - '@config'
+            - '@request'
+            - '@template'
+            - '@user'
+
+    jules.userextensions.leaderboard_controller:
+        class: jules\userextensions\controller\leaderboard_controller
+        arguments:
+            - '@dbal.conn'
+            - '@template'
+
+    jules.userextensions.shop_controller:
+        class: jules\userextensions\controller\shop_controller
+        arguments:
+            - '@dbal.conn'
+            - '@template'
+            - '@user'

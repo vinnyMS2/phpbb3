@@ -1,0 +1,30 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>{L_SHOP}</h2>
+
+<div class="panel">
+    <div class="inner">
+        <table class="table1">
+            <thead>
+                <tr>
+                    <th>{L_ITEM_NAME}</th>
+                    <th>{L_ITEM_DESCRIPTION}</th>
+                    <th>{L_ITEM_COST}</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- BEGIN shop_item -->
+                <tr class="<!-- IF shop_item.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+                    <td>{shop_item.NAME}</td>
+                    <td>{shop_item.DESCRIPTION}</td>
+                    <td>{shop_item.COST}</td>
+                    <td><a href="{U_PURCHASE_ITEM}?item_id={shop_item.ID}">{L_PURCHASE}</a></td>
+                </tr>
+                <!-- END shop_item -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

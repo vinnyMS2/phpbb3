@@ -1,0 +1,10 @@
+routes:
+    jules_userextensions_leaderboard:
+        path: /leaderboard
+        defaults: { _controller: jules.userextensions.leaderboard_controller:handle }
+    jules_userextensions_shop:
+        path: /shop
+        defaults: { _controller: jules.userextensions.shop_controller:handle }
+    jules_userextensions_purchase:
+        path: /shop/purchase
+        defaults: { _controller: jules.userextensions.shop_controller:purchase }
