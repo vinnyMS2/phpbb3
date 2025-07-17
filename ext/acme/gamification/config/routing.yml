@@ -1,0 +1,2 @@
+imports:
+    - { resource: '@acme_gamification/config/routing/leaderboard.yml' }

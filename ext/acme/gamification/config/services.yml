@@ -1,0 +1,14 @@
+services:
+    acme.gamification.listener:
+        class: acme\gamification\event\main_listener
+        arguments:
+            - '@dbal.conn'
+            - '@config'
+            - '@user'
+        tags:
+            - { name: event.subscriber }
+    acme.gamification.controller.leaderboard:
+        class: acme\gamification\controller\leaderboard_controller
+        arguments:
+            - '@dbal.conn'
+            - '@template'

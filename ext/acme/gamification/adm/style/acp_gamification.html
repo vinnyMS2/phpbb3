@@ -1,0 +1,22 @@
+{% extends 'acp_forums.html' %}
+
+{% block acp_forum_legend %}
+<legend>{{ l('ACP_GAMIFICATION_SETTINGS') }}</legend>
+{% endblock %}
+
+{% block acp_forum_settings %}
+<fieldset>
+    <dl>
+        <dt><label for="gamification_xp_topic">{{ l('GAMIFICATION_XP_TOPIC') }}</label><br><span>{{ l('GAMIFICATION_XP_TOPIC_EXPLAIN') }}</span></dt>
+        <dd><input id="gamification_xp_topic" type="number" size="4" min="0" name="gamification_xp_topic" value="{{ GAMIFICATION_XP_TOPIC }}"></dd>
+    </dl>
+    <dl>
+        <dt><label for="gamification_xp_reply">{{ l('GAMIFICATION_XP_REPLY') }}</label><br><span>{{ l('GAMIFICATION_XP_REPLY_EXPLAIN') }}</span></dt>
+        <dd><input id="gamification_xp_reply" type="number" size="4" min="0" name="gamification_xp_reply" value="{{ GAMIFICATION_XP_REPLY }}"></dd>
+    </dl>
+    <dl>
+        <dt><label for="gamification_xp_like">{{ l('GAMIFICATION_XP_LIKE') }}</label><br><span>{{ l('GAMIFICATION_XP_LIKE_EXPLAIN') }}</span></dt>
+        <dd><input id="gamification_xp_like" type="number" size="4" min="0" name="gamification_xp_like" value="{{ GAMIFICATION_XP_LIKE }}"></dd>
+    </dl>
+</fieldset>
+{% endblock %}

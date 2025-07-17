@@ -1,0 +1,35 @@
+{% extends 'acp_forums.html' %}
+
+{% block acp_forum_legend %}
+<legend>{{ l('ACP_GAMIFICATION_LEVELS') }}</legend>
+{% endblock %}
+
+{% block acp_forum_settings %}
+<form id="acp_gamification_levels" method="post" action="{{ U_ACTION }}">
+    <fieldset>
+        <legend>{{ l('ACP_GAMIFICATION_LEVELS_EXPLAIN') }}</legend>
+        <table class="table1 zebra-table">
+            <thead>
+                <tr>
+                    <th>{{ l('LEVEL_NAME') }}</th>
+                    <th>{{ l('LEVEL_XP') }}</th>
+                    <th>{{ l('ACTION') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for level in levels %}
+                <tr>
+                    <td>{{ level.LEVEL_NAME }}</td>
+                    <td>{{ level.LEVEL_XP }}</td>
+                    <td><a href="{{ U_EDIT_LEVEL }}&amp;id={{ level.LEVEL_ID }}">{{ l('EDIT') }}</a> | <a href="{{ U_DELETE_LEVEL }}&amp;id={{ level.LEVEL_ID }}">{{ l('DELETE') }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </fieldset>
+    <fieldset class="quick">
+        <input type="submit" name="add_level" value="{{ l('ADD_LEVEL') }}" class="button2">
+    </fieldset>
+    {{ S_FORM_TOKEN }}
+</form>
+{% endblock %}

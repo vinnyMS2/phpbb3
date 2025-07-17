@@ -1,0 +1,27 @@
+{
+    "name": "acme/gamification",
+    "type": "phpbb-extension",
+    "description": "A gamification system for phpBB.",
+    "homepage": "http://www.acme.com",
+    "version": "1.0.0",
+    "time": "2023-05-22",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Acme Corporation",
+            "email": "contact@acme.com",
+            "homepage": "http://www.acme.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "phpbb/phpbb": ">=3.3"
+    },
+    "extra": {
+        "display-name": "Gamification",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.3"
+        }
+    }
+}

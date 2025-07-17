@@ -1,0 +1,32 @@
+{% extends 'overall_header.html' %}
+
+{% block content %}
+<h2>{{ l('LEADERBOARD') }}</h2>
+
+<div class="forumbg">
+    <div class="inner">
+        <ul class="topiclist">
+            <li class="header">
+                <dl class="row-item">
+                    <dt>{{ l('RANK') }}</dt>
+                    <dd class="posts">{{ l('USERNAME') }}</dd>
+                    <dd class="views">{{ l('LEVEL') }}</dd>
+                    <dd class="lastpost"><span>{{ l('XP') }}</span></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="topiclist cplist">
+            {% for user in leaderboard %}
+            <li class="row {{ loop.index is odd ? 'bg1' : 'bg2' }}">
+                <dl class="row-item">
+                    <dt>{{ loop.index }}</dt>
+                    <dd class="posts">{{ user.USERNAME }}</dd>
+                    <dd class="views">{{ user.LEVEL }}</dd>
+                    <dd class="lastpost"><span>{{ user.XP }}</span></dd>
+                </dl>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

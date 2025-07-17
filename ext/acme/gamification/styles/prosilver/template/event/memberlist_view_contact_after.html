@@ -1,0 +1,13 @@
+{% if member.custom_fields.gamification_level %}
+<div class="panel bg2">
+    <div class="inner">
+        <h3>{{ l('GAMIFICATION') }}</h3>
+        <dl class="details">
+            <dt>{{ l('GAMIFICATION_LEVEL') }}:</dt>
+            <dd>{{ member.custom_fields.gamification_level }}</dd>
+            <dt>{{ l('GAMIFICATION_XP') }}:</dt>
+            <dd>{{ member.custom_fields.gamification_xp }}</dd>
+        </dl>
+    </div>
+</div>
+{% endif %}

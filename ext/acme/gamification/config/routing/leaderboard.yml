@@ -1,0 +1,3 @@
+acme_gamification_leaderboard:
+    path: /leaderboard
+    defaults: { _controller: 'acme.gamification.controller.leaderboard:handle' }
